@@ -27,7 +27,6 @@ int reverseNumber(int number) {
     num -= v * re;
     result += v * pow(10, (floor - i)).toInt();
   }
-
   return number.sign * result;
 }
 
