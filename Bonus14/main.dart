@@ -2,23 +2,29 @@ import 'dart:io';
 
 void main() {
   clearTerminal();
-  List<String> a;
-  a = ['Peter', 'Ingeborg', 'Liesel'];
-  print('$a: ${numberOfChar(a)}');
-  a = ['Auto', 'Flugzeug', 'Schiff'];
-  print('$a: ${numberOfChar(a)}');
-  a = ['Blume', 'Baum', 'Farn'];
-  print('$a: ${numberOfChar(a)}');
+  double celsius;
+  double fahrenheit;
+
+  celsius = 10;
+
+  fahrenheit = changeTemperatureScala(celsius, true);
+  print('Celsius2Fahrenheit von $celsius = $fahrenheit');
+
+  celsius = changeTemperatureScala(fahrenheit, false);
+  print('Fahrenheit2Celsius von $fahrenheit = $celsius');
+
+  celsius = 42;
+  fahrenheit = changeTemperatureScala(celsius, true);
+  print('Celsius2Fahrenheit von $celsius = $fahrenheit');
+
+  celsius = changeTemperatureScala(fahrenheit, false);
+  print('Fahrenheit2Celsius von $fahrenheit = $celsius');
 
   print('');
 }
 
-Map<String, int> numberOfChar(List<String> list) {
-  Map<String, int> result = {};
-  for (String text in list) {
-    result[text] = text.length;
-  }
-  return result;
+double changeTemperatureScala(double value, bool isCelsius) {
+  return isCelsius ? value * 1.8 + 32 : (value - 32) * 5 / 9;
 }
 
 void clearTerminal() {
