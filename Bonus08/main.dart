@@ -1,11 +1,5 @@
 import 'dart:io';
 
-enum NumberType {
-  zero,
-  positive,
-  negative,
-}
-
 void main() {
   clearTerminal();
   String a;

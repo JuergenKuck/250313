@@ -2,12 +2,6 @@ import 'dart:io';
 
 //Kopie von Bonus9 ??????????
 
-enum NumberType {
-  zero,
-  positive,
-  negative,
-}
-
 void main() {
   clearTerminal();
   List<String> a;
