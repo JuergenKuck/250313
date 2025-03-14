@@ -23,7 +23,7 @@ int reverseNumber(int number) {
   int floor = (log(num) / log(10)).floor();
   for (int i = floor; i >= 0; i--) {
     int re = pow(10, i).toInt();
-    int v = (num / re).toInt();
+    int v = num ~/ re;
     num -= v * re;
     result += v * pow(10, (floor - i)).toInt();
   }
